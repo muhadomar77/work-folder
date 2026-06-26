@@ -1,0 +1,1312 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: irctc_booking.spec.js >> irctc testing >> Book ticket
+- Location: tests\irctc_booking.spec.js:19:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('//div[contains(@class,"pre-avl")][.//strong[text()="Sleeper (SL)"]]') resolved to 9 elements:
+    1) <div tabindex="0" class="pre-avl" _ngcontent-jmt-c126="">…</div> aka getByText('Sleeper (SL) Refresh').first()
+    2) <div tabindex="0" class="pre-avl" _ngcontent-jmt-c126="">…</div> aka getByText('Sleeper (SL) Refresh').nth(1)
+    ...
+
+Call log:
+  - waiting for locator('//div[contains(@class,"pre-avl")][.//strong[text()="Sleeper (SL)"]]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner "Header" [ref=e4]:
+      - generic [ref=e5]:
+        - banner [ref=e6]:
+          - generic [ref=e7]:
+            - img "Indian railway logo" [ref=e9]
+            - img "IRCTC Logo" [ref=e11]
+          - generic [ref=e14] [cursor=pointer]: 
+          - text:   
+        - text:             
+    - generic [ref=e18]:
+      - text:  
+      - generic [ref=e19]:
+        - generic:
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - generic [ref=e23]:
+                - generic [ref=e25]: 
+                - searchbox "FROM *" [ref=e28]: KOZHIKKODE - CLT
+                - generic:
+                  - generic [ref=e30] [cursor=pointer]: 
+                  - text: 
+              - generic [ref=e31]:
+                - generic [ref=e33]: 
+                - searchbox "TO *" [ref=e36]: ERNAKULAM JN - ERS (KOCHI / ERNAKULAM)
+              - generic [ref=e37]:
+                - generic [ref=e39]: 
+                - textbox "DD/MM/YYYY *" [ref=e42]: 29/06/2026
+              - generic [ref=e43]:
+                - generic [ref=e45]: 
+                - generic [ref=e47] [cursor=pointer]:
+                  - generic [ref=e48]:
+                    - listbox "All Classes"
+                  - generic [ref=e50]: All Classes
+                  - button "" [ref=e51]:
+                    - generic [ref=e52]: 
+              - generic [ref=e53]:
+                - generic [ref=e55]: 
+                - generic [ref=e57] [cursor=pointer]:
+                  - generic [ref=e58]:
+                    - listbox "GENERAL"
+                  - generic [ref=e60]: GENERAL
+                  - button "" [ref=e61]:
+                    - generic [ref=e62]: 
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - checkbox "Check to fetch trains runs on other days than you are searching for." [ref=e65]
+                - generic [ref=e66] [cursor=pointer]: Flexible With Date
+              - generic [ref=e67]:
+                - checkbox "Check for DIVYAANG Concession Booking." [ref=e68]
+                - generic [ref=e69] [cursor=pointer]: Person With Disability Concession
+              - generic [ref=e70]:
+                - checkbox "Check for pass Booking" [ref=e71]
+                - generic [ref=e72] [cursor=pointer]: Railway Pass Concession
+          - button "Modify Search" [ref=e74] [cursor=pointer]
+      - text:                   
+      - generic [ref=e76]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - strong:
+              - generic [ref=e82]: Refine Results
+              - generic [ref=e83] [cursor=pointer]: Remove Filter
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e88]:
+                - text: JOURNEY CLASS
+                - generic [ref=e89] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e90] [cursor=pointer]:
+                - generic [ref=e91]: 
+            - region "JOURNEY CLASS Select All " [ref=e92]:
+              - table [ref=e94]:
+                - row "AC First Class (1A) AC 2 Tier (2A) Second Sitting (2S) AC 3 Tier (3A) AC 3 Economy (3E) AC Chair car (CC) Exec. Chair Car (EC) Sleeper (SL)" [ref=e95]:
+                  - cell "AC First Class (1A)" [ref=e96]:
+                    - checkbox [checked] [ref=e97]
+                    - generic [ref=e98] [cursor=pointer]: AC First Class (1A)
+                  - cell "AC 2 Tier (2A)" [ref=e99]:
+                    - checkbox [checked] [ref=e100]
+                    - generic [ref=e101] [cursor=pointer]: AC 2 Tier (2A)
+                  - cell "Second Sitting (2S)" [ref=e102]:
+                    - checkbox [checked] [ref=e103]
+                    - generic [ref=e104] [cursor=pointer]: Second Sitting (2S)
+                  - cell "AC 3 Tier (3A)" [ref=e105]:
+                    - checkbox [checked] [ref=e106]
+                    - generic [ref=e107] [cursor=pointer]: AC 3 Tier (3A)
+                  - cell "AC 3 Economy (3E)" [ref=e108]:
+                    - checkbox [checked] [ref=e109]
+                    - generic [ref=e110] [cursor=pointer]: AC 3 Economy (3E)
+                  - cell "AC Chair car (CC)" [ref=e111]:
+                    - checkbox [checked] [ref=e112]
+                    - generic [ref=e113] [cursor=pointer]: AC Chair car (CC)
+                  - cell "Exec. Chair Car (EC)" [ref=e114]:
+                    - checkbox [checked] [ref=e115]
+                    - generic [ref=e116] [cursor=pointer]: Exec. Chair Car (EC)
+                  - cell "Sleeper (SL)" [ref=e117]:
+                    - checkbox [checked] [ref=e118]
+                    - generic [ref=e119] [cursor=pointer]: Sleeper (SL)
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e124]:
+                - text: TRAIN TYPE
+                - generic [ref=e125] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e126] [cursor=pointer]:
+                - generic [ref=e127]: 
+            - region "TRAIN TYPE Select All " [ref=e128]:
+              - table [ref=e130]:
+                - row "DURONTO JANSHATABDI OTHER RAJDHANI SHATABDI OTHER" [ref=e131]:
+                  - cell "DURONTO" [ref=e132]:
+                    - checkbox [checked] [ref=e133]
+                    - generic [ref=e134] [cursor=pointer]: DURONTO
+                  - cell "JANSHATABDI" [ref=e135]:
+                    - checkbox [checked] [ref=e136]
+                    - generic [ref=e137] [cursor=pointer]: JANSHATABDI
+                  - cell "OTHER" [ref=e138]:
+                    - checkbox [checked] [ref=e139]
+                    - generic [ref=e140] [cursor=pointer]: OTHER
+                  - cell "RAJDHANI" [ref=e141]:
+                    - checkbox [checked] [ref=e142]
+                    - generic [ref=e143] [cursor=pointer]: RAJDHANI
+                  - cell "SHATABDI" [ref=e144]:
+                    - checkbox [checked] [ref=e145]
+                    - generic [ref=e146] [cursor=pointer]: SHATABDI
+                  - cell "OTHER" [ref=e147]:
+                    - checkbox [checked] [ref=e148]
+                    - generic [ref=e149] [cursor=pointer]: OTHER
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e154]:
+                - text: DEPARTURE TIME
+                - generic [ref=e155] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e156] [cursor=pointer]:
+                - generic [ref=e157]: 
+            - region "DEPARTURE TIME Select All " [ref=e158]:
+              - table [ref=e160]:
+                - row "00:00 - 06:00 Early Morning 06:00 - 12:00 Morning 12:00 - 18:00 Mid Day 18:00 - 24:00 Night" [ref=e161]:
+                  - strong:
+                    - cell "00:00 - 06:00 Early Morning" [ref=e162]:
+                      - text: 00:00 - 06:00
+                      - text: Early Morning
+                    - cell "06:00 - 12:00 Morning" [ref=e163]:
+                      - text: 06:00 - 12:00
+                      - text: Morning
+                    - cell "12:00 - 18:00 Mid Day" [ref=e164]:
+                      - text: 12:00 - 18:00
+                      - text: Mid Day
+                    - cell "18:00 - 24:00 Night" [ref=e165]:
+                      - text: 18:00 - 24:00
+                      - text: Night
+          - generic [ref=e172]:
+            - generic [ref=e173]: 00:00 Hrs
+            - generic [ref=e174]: 24:00 Hrs
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e179]:
+                - text: ARRIVAL TIME
+                - generic [ref=e180] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e181] [cursor=pointer]:
+                - generic [ref=e182]: 
+            - region "ARRIVAL TIME Select All " [ref=e183]:
+              - table [ref=e185]:
+                - row "00:00 - 06:00 Early Morning 06:00 - 12:00 Morning 12:00 - 18:00 Mid Day 18:00 - 24:00 Night" [ref=e186]:
+                  - strong:
+                    - cell "00:00 - 06:00 Early Morning" [ref=e187]:
+                      - text: 00:00 - 06:00
+                      - text: Early Morning
+                    - cell "06:00 - 12:00 Morning" [ref=e188]:
+                      - text: 06:00 - 12:00
+                      - text: Morning
+                    - cell "12:00 - 18:00 Mid Day" [ref=e189]:
+                      - text: 12:00 - 18:00
+                      - text: Mid Day
+                    - cell "18:00 - 24:00 Night" [ref=e190]:
+                      - text: 18:00 - 24:00
+                      - text: Night
+          - generic [ref=e197]:
+            - generic [ref=e198]: 00:00 Hrs
+            - generic [ref=e199]: 24:00 Hrs
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - generic [ref=e204]:
+                - text: FROM STATIONS
+                - generic [ref=e205] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e206] [cursor=pointer]:
+                - generic [ref=e207]: 
+            - region "FROM STATIONS Select All " [ref=e208]:
+              - table [ref=e210]:
+                - row "KOZHIKKODE" [ref=e211]:
+                  - cell "KOZHIKKODE" [ref=e212]:
+                    - checkbox [checked] [ref=e213]
+                    - generic [ref=e214] [cursor=pointer]: KOZHIKKODE
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e219]:
+                - text: TO STATIONS
+                - generic [ref=e220] [cursor=pointer]: Select All
+              - tab "" [expanded] [ref=e221] [cursor=pointer]:
+                - generic [ref=e222]: 
+            - region "TO STATIONS Select All " [ref=e223]:
+              - table [ref=e225]:
+                - row "ERNAKULAM TOWN ERNAKULAM JN TRIUPUNITTURA" [ref=e226]:
+                  - cell "ERNAKULAM TOWN" [ref=e227]:
+                    - checkbox [checked] [ref=e228]
+                    - generic [ref=e229] [cursor=pointer]: ERNAKULAM TOWN
+                  - cell "ERNAKULAM JN" [ref=e230]:
+                    - checkbox [checked] [ref=e231]
+                    - generic [ref=e232] [cursor=pointer]: ERNAKULAM JN
+                  - cell "TRIUPUNITTURA" [ref=e233]:
+                    - checkbox [checked] [ref=e234]
+                    - generic [ref=e235] [cursor=pointer]: TRIUPUNITTURA
+        - generic [ref=e239]:
+          - generic "18. Result for and displayed for your query" [ref=e240]:
+            - generic [ref=e241]:
+              - text: 18 Results for
+              - strong [ref=e242]:
+                - text: KOZHIKKODE
+                - generic [ref=e243]: 
+                - text: ERNAKULAM JN | Mon, 29 Jun 2026
+              - text: For Quota | General
+          - generic:
+            - button "Sort By | Departure" [ref=e246] [cursor=pointer]
+            - generic [ref=e247]:
+              - button " Previous Day" [ref=e248] [cursor=pointer]:
+                - generic [ref=e249]: 
+                - text: Previous Day
+              - button "Next Day " [ref=e250] [cursor=pointer]:
+                - text: Next Day
+                - generic [ref=e251]: 
+              - text: 
+          - generic [ref=e253]:
+            - generic [ref=e256]:
+              - generic:
+                - generic:
+                  - generic [ref=e257]:
+                    - strong [ref=e260]: MNGLA LKSDP EXP (12618)
+                    - generic [ref=e261]:
+                      - generic [ref=e262]: "Runs On: MTWTFSS"
+                      - strong [ref=e264]:
+                        - generic [ref=e265] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e267]:
+                    - generic [ref=e268]:
+                      - strong [ref=e270]: 03:35 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e271]:
+                      - generic [ref=e272]: 04:25
+                      - generic [ref=e273]:
+                        - strong [ref=e274]: 08:00 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e280]:
+                    - row "Sleeper (SL) Refresh  AC 3 Economy (3E) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e281]:
+                      - cell "Sleeper (SL) Refresh " [ref=e282]:
+                        - generic [ref=e283]:
+                          - strong [ref=e285]: Sleeper (SL)
+                          - generic [ref=e286] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e287]: 
+                      - cell "AC 3 Economy (3E) Refresh " [ref=e288]:
+                        - generic [ref=e289]:
+                          - strong [ref=e291]: AC 3 Economy (3E)
+                          - generic [ref=e292] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e293]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e294]:
+                        - generic [ref=e295]:
+                          - strong [ref=e297]: AC 3 Tier (3A)
+                          - generic [ref=e298] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e299]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e300]:
+                        - generic [ref=e301]:
+                          - strong [ref=e303]: AC 2 Tier (2A)
+                          - generic [ref=e304] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e305]: 
+                  - strong [ref=e310]:
+                    - generic [ref=e311]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e312] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e317]:
+                  - button "Book Now" [ref=e318] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e319] [cursor=pointer]
+            - generic [ref=e320]:
+              - generic:
+                - generic:
+                  - generic [ref=e321]:
+                    - strong [ref=e324]: TVC JANSHATABDI (12081)
+                    - generic [ref=e325]:
+                      - generic [ref=e326]: "Runs On: MTWTFSS"
+                      - strong [ref=e328]:
+                        - generic [ref=e329] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e331]:
+                    - generic [ref=e332]:
+                      - strong [ref=e334]: 06:10 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e335]:
+                      - generic [ref=e336]: 03:20
+                      - generic [ref=e337]:
+                        - strong [ref=e338]: 09:30 |
+                        - text: ERNAKULAM TOWN | Mon, 29 Jun
+                  - table [ref=e344]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e345]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e346]:
+                        - generic [ref=e347]:
+                          - strong [ref=e349]: Second Sitting (2S)
+                          - generic [ref=e350] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e351]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e352]:
+                        - generic [ref=e353]:
+                          - strong [ref=e355]: AC Chair car (CC)
+                          - generic [ref=e356] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e357]: 
+                  - strong [ref=e362]:
+                    - generic [ref=e363]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e364] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e369]:
+                  - button "Book Now" [ref=e370] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e371] [cursor=pointer]
+            - generic [ref=e372]:
+              - generic:
+                - generic:
+                  - generic [ref=e373]:
+                    - strong [ref=e376]: MADGAON ERS EXP (10215)
+                    - generic [ref=e377]:
+                      - generic [ref=e378]: "Runs On: MTWTFSS"
+                      - strong [ref=e380]:
+                        - generic [ref=e381] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e383]:
+                    - generic [ref=e384]:
+                      - strong [ref=e386]: 06:10 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e387]:
+                      - generic [ref=e388]: 04:50
+                      - generic [ref=e389]:
+                        - strong [ref=e390]: 11:00 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e396]:
+                    - row "Sleeper (SL) Refresh  AC 3 Economy (3E) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e397]:
+                      - cell "Sleeper (SL) Refresh " [ref=e398]:
+                        - generic [ref=e399]:
+                          - strong [ref=e401]: Sleeper (SL)
+                          - generic [ref=e402] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e403]: 
+                      - cell "AC 3 Economy (3E) Refresh " [ref=e404]:
+                        - generic [ref=e405]:
+                          - strong [ref=e407]: AC 3 Economy (3E)
+                          - generic [ref=e408] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e409]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e410]:
+                        - generic [ref=e411]:
+                          - strong [ref=e413]: AC 3 Tier (3A)
+                          - generic [ref=e414] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e415]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e416]:
+                        - generic [ref=e417]:
+                          - strong [ref=e419]: AC 2 Tier (2A)
+                          - generic [ref=e420] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e421]: 
+                  - strong [ref=e426]:
+                    - generic [ref=e427]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e428] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e433]:
+                  - button "Book Now" [ref=e434] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e435] [cursor=pointer]
+            - generic [ref=e436]:
+              - generic:
+                - generic:
+                  - generic [ref=e437]:
+                    - strong [ref=e440]: CAN ALLP EXP (16308)
+                    - generic [ref=e441]:
+                      - generic [ref=e442]: "Runs On: MTWTFSS"
+                      - strong [ref=e444]:
+                        - generic [ref=e445] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e447]:
+                    - generic [ref=e448]:
+                      - strong [ref=e450]: 06:40 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e451]:
+                      - generic [ref=e452]: 04:35
+                      - generic [ref=e453]:
+                        - strong [ref=e454]: 11:15 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e460]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e461]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e462]:
+                        - generic [ref=e463]:
+                          - strong [ref=e465]: Second Sitting (2S)
+                          - generic [ref=e466] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e467]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e468]:
+                        - generic [ref=e469]:
+                          - strong [ref=e471]: AC Chair car (CC)
+                          - generic [ref=e472] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e473]: 
+                  - strong [ref=e478]:
+                    - generic [ref=e479]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e480] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e485]:
+                  - button "Book Now" [ref=e486] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e487] [cursor=pointer]
+            - generic [ref=e488]:
+              - generic:
+                - generic:
+                  - generic [ref=e489]:
+                    - strong [ref=e492]: JAM TEN EXP (19578)
+                    - generic [ref=e493]:
+                      - generic [ref=e494]: "Runs On: MTWTFSS"
+                      - strong [ref=e496]:
+                        - generic [ref=e497] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e499]:
+                    - generic [ref=e500]:
+                      - strong [ref=e502]: 07:25 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e503]:
+                      - generic [ref=e504]: 04:55
+                      - generic [ref=e505]:
+                        - strong [ref=e506]: 12:20 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e512]:
+                    - row "Sleeper (SL) Refresh  AC 3 Economy (3E) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e513]:
+                      - cell "Sleeper (SL) Refresh " [ref=e514]:
+                        - generic [ref=e515]:
+                          - strong [ref=e517]: Sleeper (SL)
+                          - generic [ref=e518] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e519]: 
+                      - cell "AC 3 Economy (3E) Refresh " [ref=e520]:
+                        - generic [ref=e521]:
+                          - strong [ref=e523]: AC 3 Economy (3E)
+                          - generic [ref=e524] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e525]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e526]:
+                        - generic [ref=e527]:
+                          - strong [ref=e529]: AC 3 Tier (3A)
+                          - generic [ref=e530] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e531]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e532]:
+                        - generic [ref=e533]:
+                          - strong [ref=e535]: AC 2 Tier (2A)
+                          - generic [ref=e536] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e537]: 
+                  - strong [ref=e542]:
+                    - generic [ref=e543]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e544] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e549]:
+                  - button "Book Now" [ref=e550] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e551] [cursor=pointer]
+            - generic [ref=e552]:
+              - generic:
+                - generic:
+                  - generic [ref=e553]:
+                    - strong [ref=e556]: PARASURAM EXP (16649)
+                    - generic [ref=e557]:
+                      - generic [ref=e558]: "Runs On: MTWTFSS"
+                      - strong [ref=e560]:
+                        - generic [ref=e561] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e563]:
+                    - generic [ref=e564]:
+                      - strong [ref=e566]: 08:30 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e567]:
+                      - generic [ref=e568]: 05:55
+                      - generic [ref=e569]:
+                        - strong [ref=e570]: 14:25 |
+                        - text: TRIUPUNITTURA | Mon, 29 Jun
+                  - table [ref=e576]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e577]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e578]:
+                        - generic [ref=e579]:
+                          - strong [ref=e581]: Second Sitting (2S)
+                          - generic [ref=e582] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e583]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e584]:
+                        - generic [ref=e585]:
+                          - strong [ref=e587]: AC Chair car (CC)
+                          - generic [ref=e588] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e589]: 
+                  - strong [ref=e594]:
+                    - generic [ref=e595]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e596] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e601]:
+                  - button "Book Now" [ref=e602] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e603] [cursor=pointer]
+            - generic [ref=e604]:
+              - generic:
+                - generic:
+                  - generic [ref=e605]:
+                    - strong [ref=e608]: MAQ TVC VB EXP (20631)
+                    - generic [ref=e609]:
+                      - generic [ref=e610]: "Runs On: MTWTFSS"
+                      - strong [ref=e612]:
+                        - generic [ref=e613] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e615]:
+                    - generic [ref=e616]:
+                      - strong [ref=e618]: 08:59 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e619]:
+                      - generic [ref=e620]: 02:41
+                      - generic [ref=e621]:
+                        - strong [ref=e622]: 11:40 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e628]:
+                    - row "AC Chair car (CC) Refresh  Exec. Chair Car (EC) Refresh " [ref=e629]:
+                      - cell "AC Chair car (CC) Refresh " [ref=e630]:
+                        - generic [ref=e631]:
+                          - strong [ref=e633]: AC Chair car (CC)
+                          - generic [ref=e634] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e635]: 
+                      - cell "Exec. Chair Car (EC) Refresh " [ref=e636]:
+                        - generic [ref=e637]:
+                          - strong [ref=e639]: Exec. Chair Car (EC)
+                          - generic [ref=e640] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e641]: 
+                  - strong [ref=e646]:
+                    - generic [ref=e647]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e648] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e653]:
+                  - button "Book Now" [ref=e654] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e655] [cursor=pointer]
+            - generic [ref=e656]:
+              - generic:
+                - generic:
+                  - generic [ref=e657]:
+                    - strong [ref=e660]: NETRAVATI EXP (16345)
+                    - generic [ref=e661]:
+                      - generic [ref=e662]: "Runs On: MTWTFSS"
+                      - strong [ref=e664]:
+                        - generic [ref=e665] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e667]:
+                    - generic [ref=e668]:
+                      - strong [ref=e670]: 09:45 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e671]:
+                      - generic [ref=e672]: 04:25
+                      - generic [ref=e673]:
+                        - strong [ref=e674]: 14:10 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e680]:
+                    - row "Sleeper (SL) Refresh  AC 3 Economy (3E) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e681]:
+                      - cell "Sleeper (SL) Refresh " [ref=e682]:
+                        - generic [ref=e683]:
+                          - strong [ref=e685]: Sleeper (SL)
+                          - generic [ref=e686] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e687]: 
+                      - cell "AC 3 Economy (3E) Refresh " [ref=e688]:
+                        - generic [ref=e689]:
+                          - strong [ref=e691]: AC 3 Economy (3E)
+                          - generic [ref=e692] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e693]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e694]:
+                        - generic [ref=e695]:
+                          - strong [ref=e697]: AC 3 Tier (3A)
+                          - generic [ref=e698] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e699]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e700]:
+                        - generic [ref=e701]:
+                          - strong [ref=e703]: AC 2 Tier (2A)
+                          - generic [ref=e704] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e705]: 
+                  - strong [ref=e710]:
+                    - generic [ref=e711]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e712] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e717]:
+                  - button "Book Now" [ref=e718] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e719] [cursor=pointer]
+            - generic [ref=e720]:
+              - generic:
+                - generic:
+                  - generic [ref=e721]:
+                    - strong [ref=e724]: ERNAD EXPRESS (16605)
+                    - generic [ref=e725]:
+                      - generic [ref=e726]: "Runs On: MTWTFSS"
+                      - strong [ref=e728]:
+                        - generic [ref=e729] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e731]:
+                    - generic [ref=e732]:
+                      - strong [ref=e734]: 11:10 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e735]:
+                      - generic [ref=e736]: 05:05
+                      - generic [ref=e737]:
+                        - strong [ref=e738]: 16:15 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e744]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e745]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e746]:
+                        - generic [ref=e747]:
+                          - strong [ref=e749]: Second Sitting (2S)
+                          - generic [ref=e750] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e751]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e752]:
+                        - generic [ref=e753]:
+                          - strong [ref=e755]: AC Chair car (CC)
+                          - generic [ref=e756] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e757]: 
+                  - strong [ref=e762]:
+                    - generic [ref=e763]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e764] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e769]:
+                  - button "Book Now" [ref=e770] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e771] [cursor=pointer]
+            - generic [ref=e772]:
+              - generic:
+                - generic:
+                  - generic [ref=e773]:
+                    - strong [ref=e776]: NZM ERS DURONTO (12284)
+                    - generic [ref=e777]:
+                      - generic [ref=e778]: "Runs On: MTWTFSS"
+                      - strong [ref=e780]:
+                        - generic [ref=e781] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e783]:
+                    - generic [ref=e784]:
+                      - strong [ref=e786]: 13:00 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e787]:
+                      - generic [ref=e788]: 05:15
+                      - generic [ref=e789]:
+                        - strong [ref=e790]: 18:15 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e796]:
+                    - row "Second Sitting (2S) Refresh  Sleeper (SL) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh  AC First Class (1A) Refresh " [ref=e797]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e798]:
+                        - generic [ref=e799]:
+                          - strong [ref=e801]: Second Sitting (2S)
+                          - generic [ref=e802] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e803]: 
+                      - cell "Sleeper (SL) Refresh " [ref=e804]:
+                        - generic [ref=e805]:
+                          - strong [ref=e807]: Sleeper (SL)
+                          - generic [ref=e808] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e809]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e810]:
+                        - generic [ref=e811]:
+                          - strong [ref=e813]: AC 3 Tier (3A)
+                          - generic [ref=e814] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e815]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e816]:
+                        - generic [ref=e817]:
+                          - strong [ref=e819]: AC 2 Tier (2A)
+                          - generic [ref=e820] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e821]: 
+                      - cell "AC First Class (1A) Refresh " [ref=e822]:
+                        - generic [ref=e823]:
+                          - strong [ref=e825]: AC First Class (1A)
+                          - generic [ref=e826] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e827]: 
+                  - strong [ref=e832]:
+                    - generic [ref=e833]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e834] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e839]:
+                  - button "Book Now" [ref=e840] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e841] [cursor=pointer]
+            - generic [ref=e842]:
+              - generic:
+                - generic:
+                  - generic [ref=e843]:
+                    - strong [ref=e846]: TVC JANSHATABDI (12075)
+                    - generic [ref=e847]:
+                      - generic [ref=e848]: "Runs On: MTWTFSS"
+                      - strong [ref=e850]:
+                        - generic [ref=e851] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e853]:
+                    - generic [ref=e854]:
+                      - strong [ref=e856]: 13:45 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e857]:
+                      - generic [ref=e858]: 03:35
+                      - generic [ref=e859]:
+                        - strong [ref=e860]: 17:20 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e866]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e867]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e868]:
+                        - generic [ref=e869]:
+                          - strong [ref=e871]: Second Sitting (2S)
+                          - generic [ref=e872] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e873]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e874]:
+                        - generic [ref=e875]:
+                          - strong [ref=e877]: AC Chair car (CC)
+                          - generic [ref=e878] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e879]: 
+                  - strong [ref=e884]:
+                    - generic [ref=e885]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e886] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e891]:
+                  - button "Book Now" [ref=e892] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e893] [cursor=pointer]
+            - generic [ref=e894]:
+              - generic:
+                - generic:
+                  - generic [ref=e895]:
+                    - strong [ref=e898]: CAN ERS EXPRESS (16306)
+                    - generic [ref=e899]:
+                      - generic [ref=e900]: "Runs On: MTWTFSS"
+                      - strong [ref=e902]:
+                        - generic [ref=e903] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e905]:
+                    - generic [ref=e906]:
+                      - strong [ref=e908]: 16:10 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e909]:
+                      - generic [ref=e910]: 04:40
+                      - generic [ref=e911]:
+                        - strong [ref=e912]: 20:50 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e918]:
+                    - row "Second Sitting (2S) Refresh  AC Chair car (CC) Refresh " [ref=e919]:
+                      - cell "Second Sitting (2S) Refresh " [ref=e920]:
+                        - generic [ref=e921]:
+                          - strong [ref=e923]: Second Sitting (2S)
+                          - generic [ref=e924] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e925]: 
+                      - cell "AC Chair car (CC) Refresh " [ref=e926]:
+                        - generic [ref=e927]:
+                          - strong [ref=e929]: AC Chair car (CC)
+                          - generic [ref=e930] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e931]: 
+                  - strong [ref=e936]:
+                    - generic [ref=e937]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e938] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e943]:
+                  - button "Book Now" [ref=e944] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e945] [cursor=pointer]
+            - generic [ref=e946]:
+              - generic:
+                - generic:
+                  - generic [ref=e947]:
+                    - strong [ref=e950]: TVC VANDEBHARAT (20633)
+                    - generic [ref=e951]:
+                      - generic [ref=e952]: "Runs On: MTWTFSS"
+                      - strong [ref=e954]:
+                        - generic [ref=e955] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e957]:
+                    - generic [ref=e958]:
+                      - strong [ref=e960]: 16:30 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e961]:
+                      - generic [ref=e962]: 02:42
+                      - generic [ref=e963]:
+                        - strong [ref=e964]: 19:12 |
+                        - text: ERNAKULAM TOWN | Mon, 29 Jun
+                  - table [ref=e970]:
+                    - row "AC Chair car (CC) Refresh  Exec. Chair Car (EC) Refresh " [ref=e971]:
+                      - cell "AC Chair car (CC) Refresh " [ref=e972]:
+                        - generic [ref=e973]:
+                          - strong [ref=e975]: AC Chair car (CC)
+                          - generic [ref=e976] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e977]: 
+                      - cell "Exec. Chair Car (EC) Refresh " [ref=e978]:
+                        - generic [ref=e979]:
+                          - strong [ref=e981]: Exec. Chair Car (EC)
+                          - generic [ref=e982] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e983]: 
+                  - strong [ref=e988]:
+                    - generic [ref=e989]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e990] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e995]:
+                  - button "Book Now" [ref=e996] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e997] [cursor=pointer]
+            - generic [ref=e998]:
+              - generic:
+                - generic:
+                  - generic [ref=e999]:
+                    - strong [ref=e1002]: PUNE ERS SF EXP (22150)
+                    - generic [ref=e1003]:
+                      - generic [ref=e1004]: "Runs On: MTWTFSS"
+                      - strong [ref=e1006]:
+                        - generic [ref=e1007] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e1009]:
+                    - generic [ref=e1010]:
+                      - strong [ref=e1012]: 17:00 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e1013]:
+                      - generic [ref=e1014]: 04:55
+                      - generic [ref=e1015]:
+                        - strong [ref=e1016]: 21:55 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e1022]:
+                    - row "Sleeper (SL) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e1023]:
+                      - cell "Sleeper (SL) Refresh " [ref=e1024]:
+                        - generic [ref=e1025]:
+                          - strong [ref=e1027]: Sleeper (SL)
+                          - generic [ref=e1028] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1029]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e1030]:
+                        - generic [ref=e1031]:
+                          - strong [ref=e1033]: AC 3 Tier (3A)
+                          - generic [ref=e1034] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1035]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e1036]:
+                        - generic [ref=e1037]:
+                          - strong [ref=e1039]: AC 2 Tier (2A)
+                          - generic [ref=e1040] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1041]: 
+                  - strong [ref=e1046]:
+                    - generic [ref=e1047]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e1048] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e1053]:
+                  - button "Book Now" [ref=e1054] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e1055] [cursor=pointer]
+            - generic [ref=e1056]:
+              - generic:
+                - generic:
+                  - generic [ref=e1057]:
+                    - strong [ref=e1060]: TVC RAJDHANI (12432)
+                    - generic [ref=e1061]:
+                      - generic [ref=e1062]: "Runs On: MTWTFSS"
+                      - strong [ref=e1064]:
+                        - generic [ref=e1065] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e1067]:
+                    - generic [ref=e1068]:
+                      - strong [ref=e1070]: 17:35 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e1071]:
+                      - generic [ref=e1072]: 03:50
+                      - generic [ref=e1073]:
+                        - strong [ref=e1074]: 21:25 |
+                        - text: ERNAKULAM JN | Mon, 29 Jun
+                  - table [ref=e1080]:
+                    - row "AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh  AC First Class (1A) Refresh " [ref=e1081]:
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e1082]:
+                        - generic [ref=e1083]:
+                          - strong [ref=e1085]: AC 3 Tier (3A)
+                          - generic [ref=e1086] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1087]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e1088]:
+                        - generic [ref=e1089]:
+                          - strong [ref=e1091]: AC 2 Tier (2A)
+                          - generic [ref=e1092] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1093]: 
+                      - cell "AC First Class (1A) Refresh " [ref=e1094]:
+                        - generic [ref=e1095]:
+                          - strong [ref=e1097]: AC First Class (1A)
+                          - generic [ref=e1098] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1099]: 
+                  - strong [ref=e1104]:
+                    - generic [ref=e1105]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e1106] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e1111]:
+                  - button "Book Now" [ref=e1112] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e1113] [cursor=pointer]
+            - generic [ref=e1114]:
+              - generic:
+                - generic:
+                  - generic [ref=e1115]:
+                    - strong [ref=e1118]: TRIVANDRUM EXP (16348)
+                    - generic [ref=e1119]:
+                      - generic [ref=e1120]: "Runs On: MTWTFSS"
+                      - strong [ref=e1122]:
+                        - generic [ref=e1123] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e1125]:
+                    - generic [ref=e1126]:
+                      - strong [ref=e1128]: 18:25 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e1129]:
+                      - generic [ref=e1130]: 04:45
+                      - generic [ref=e1131]:
+                        - strong [ref=e1132]: 23:10 |
+                        - text: ERNAKULAM TOWN | Mon, 29 Jun
+                  - table [ref=e1138]:
+                    - row "Sleeper (SL) Refresh  AC 3 Economy (3E) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh " [ref=e1139]:
+                      - cell "Sleeper (SL) Refresh " [ref=e1140]:
+                        - generic [ref=e1141]:
+                          - strong [ref=e1143]: Sleeper (SL)
+                          - generic [ref=e1144] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1145]: 
+                      - cell "AC 3 Economy (3E) Refresh " [ref=e1146]:
+                        - generic [ref=e1147]:
+                          - strong [ref=e1149]: AC 3 Economy (3E)
+                          - generic [ref=e1150] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1151]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e1152]:
+                        - generic [ref=e1153]:
+                          - strong [ref=e1155]: AC 3 Tier (3A)
+                          - generic [ref=e1156] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1157]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e1158]:
+                        - generic [ref=e1159]:
+                          - strong [ref=e1161]: AC 2 Tier (2A)
+                          - generic [ref=e1162] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1163]: 
+                  - strong [ref=e1168]:
+                    - generic [ref=e1169]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e1170] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e1175]:
+                  - button "Book Now" [ref=e1176] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e1177] [cursor=pointer]
+            - generic [ref=e1178]:
+              - generic:
+                - generic:
+                  - generic [ref=e1179]:
+                    - strong [ref=e1182]: MAVELI EXPRESS (16603)
+                    - generic [ref=e1183]:
+                      - generic [ref=e1184]: "Runs On: MTWTFSS"
+                      - strong [ref=e1186]:
+                        - generic [ref=e1187] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e1189]:
+                    - generic [ref=e1190]:
+                      - strong [ref=e1192]: 21:35 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e1193]:
+                      - generic [ref=e1194]: 04:15
+                      - generic [ref=e1195]:
+                        - strong [ref=e1196]: 01:50 |
+                        - text: ERNAKULAM JN | Tue, 30 Jun
+                  - table [ref=e1202]:
+                    - row "Sleeper (SL) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh  AC First Class (1A) Refresh " [ref=e1203]:
+                      - cell "Sleeper (SL) Refresh " [ref=e1204]:
+                        - generic [ref=e1205]:
+                          - strong [ref=e1207]: Sleeper (SL)
+                          - generic [ref=e1208] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1209]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e1210]:
+                        - generic [ref=e1211]:
+                          - strong [ref=e1213]: AC 3 Tier (3A)
+                          - generic [ref=e1214] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1215]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e1216]:
+                        - generic [ref=e1217]:
+                          - strong [ref=e1219]: AC 2 Tier (2A)
+                          - generic [ref=e1220] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1221]: 
+                      - cell "AC First Class (1A) Refresh " [ref=e1222]:
+                        - generic [ref=e1223]:
+                          - strong [ref=e1225]: AC First Class (1A)
+                          - generic [ref=e1226] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1227]: 
+                  - strong [ref=e1232]:
+                    - generic [ref=e1233]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e1234] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e1239]:
+                  - button "Book Now" [ref=e1240] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e1241] [cursor=pointer]
+            - generic [ref=e1242]:
+              - generic:
+                - generic:
+                  - generic [ref=e1243]:
+                    - strong [ref=e1246]: MALABAR EXPRESS (16630)
+                    - generic [ref=e1247]:
+                      - generic [ref=e1248]: "Runs On: MTWTFSS"
+                      - strong [ref=e1250]:
+                        - generic [ref=e1251] [cursor=pointer]: Train Schedule 
+                  - generic [ref=e1253]:
+                    - generic [ref=e1254]:
+                      - strong [ref=e1256]: 22:30 |
+                      - text: KOZHIKKODE | Mon, 29 Jun
+                    - generic [ref=e1257]:
+                      - generic [ref=e1258]: 04:30
+                      - generic [ref=e1259]:
+                        - strong [ref=e1260]: 03:00 |
+                        - text: ERNAKULAM TOWN | Tue, 30 Jun
+                  - table [ref=e1266]:
+                    - row "Sleeper (SL) Refresh  AC 3 Tier (3A) Refresh  AC 2 Tier (2A) Refresh  AC First Class (1A) Refresh " [ref=e1267]:
+                      - cell "Sleeper (SL) Refresh " [ref=e1268]:
+                        - generic [ref=e1269]:
+                          - strong [ref=e1271]: Sleeper (SL)
+                          - generic [ref=e1272] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1273]: 
+                      - cell "AC 3 Tier (3A) Refresh " [ref=e1274]:
+                        - generic [ref=e1275]:
+                          - strong [ref=e1277]: AC 3 Tier (3A)
+                          - generic [ref=e1278] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1279]: 
+                      - cell "AC 2 Tier (2A) Refresh " [ref=e1280]:
+                        - generic [ref=e1281]:
+                          - strong [ref=e1283]: AC 2 Tier (2A)
+                          - generic [ref=e1284] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1285]: 
+                      - cell "AC First Class (1A) Refresh " [ref=e1286]:
+                        - generic [ref=e1287]:
+                          - strong [ref=e1289]: AC First Class (1A)
+                          - generic [ref=e1290] [cursor=pointer]:
+                            - text: Refresh
+                            - generic [ref=e1291]: 
+                  - strong [ref=e1296]:
+                    - generic [ref=e1297]:
+                      - text: Please check NTES website or
+                      - link "NTES app" [ref=e1298] [cursor=pointer]:
+                        - /url: https://play.google.com/store/apps/details?id=cris.icms.ntes
+                      - text: for actual time before boarding
+                - generic [ref=e1303]:
+                  - button "Book Now" [ref=e1304] [cursor=pointer]
+                  - button "OTHER DATES" [ref=e1305] [cursor=pointer]
+    - generic [ref=e1308]:
+      - contentinfo [ref=e1310]:
+        - text: Get Connected with us on social networks
+        - generic [ref=e1311]:
+          - link "I.R.C.T.C. Official instagram page. opens a new windows" [ref=e1312] [cursor=pointer]:
+            - /url: https://www.facebook.com/IRCTCofficial/
+            - generic [ref=e1313]: 
+          - link "I.R.C.T.C. Official whatsapp page. opens a new windows" [ref=e1314] [cursor=pointer]:
+            - /url: https://whatsapp.com/channel/0029Va4wpCW84OmKdPNQi41P
+            - img [ref=e1316]
+          - link "I.R.C.T.C. Official youtube page. opens a new windows" [ref=e1317] [cursor=pointer]:
+            - /url: https://youtube.com/c/IRCTCOFFICIAL
+            - generic [ref=e1318]: 
+          - link "I.R.C.T.C. Official facebook page. opens a new windows" [ref=e1319] [cursor=pointer]:
+            - /url: https://instagram.com/irctc.official?igshid=yyg5byow704l
+            - generic [ref=e1320]: 
+          - link "I.R.C.T.C. Official linkedin page. opens a new windows" [ref=e1321] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/irctcofficial
+            - generic [ref=e1322]: 
+          - link "I.R.C.T.C. Official telegram page. opens a new windows" [ref=e1323] [cursor=pointer]:
+            - /url: https://t.me/IRCTC_Official
+            - generic [ref=e1324]: 
+          - link "I.R.C.T.C. Official pinterest page. opens a new windows" [ref=e1325] [cursor=pointer]:
+            - /url: https://in.pinterest.com/irctcofficial/
+            - generic [ref=e1326]: 
+          - link "I.R.C.T.C. Official tumblr page. opens a new windows" [ref=e1327] [cursor=pointer]:
+            - /url: https://irctcofficial.tumblr.com/
+            - generic [ref=e1328]: 
+          - link "I.R.C.T.C. Official Koo page. opens a new windows" [ref=e1329] [cursor=pointer]:
+            - /url: https://www.kooapp.com/profile/irctcofficial
+            - img [ref=e1331]
+          - link "I.R.C.T.C. Official twitter page. opens a new windows" [ref=e1332] [cursor=pointer]:
+            - /url: https://twitter.com/IRCTCofficial
+            - generic [ref=e1333]: 
+      - generic [ref=e1337]:
+        - generic [ref=e1339]:
+          - button "IRCTC Trains " [ref=e1340] [cursor=pointer]:
+            - generic [ref=e1341]:
+              - text: IRCTC Trains
+              - generic [ref=e1342]: 
+          - button "General Information " [ref=e1343] [cursor=pointer]:
+            - generic [ref=e1344]:
+              - text: General Information
+              - generic [ref=e1345]: 
+          - button "Important Information " [ref=e1346] [cursor=pointer]:
+            - generic [ref=e1347]:
+              - text: Important Information
+              - generic [ref=e1348]: 
+          - button "Agents " [ref=e1349] [cursor=pointer]:
+            - generic [ref=e1350]:
+              - text: Agents
+              - generic [ref=e1351]: 
+          - button "Enquiries " [ref=e1352] [cursor=pointer]:
+            - generic [ref=e1353]:
+              - text: Enquiries
+              - generic [ref=e1354]: 
+        - generic [ref=e1356]:
+          - button "How To " [ref=e1357] [cursor=pointer]:
+            - generic [ref=e1358]:
+              - text: How To
+              - generic [ref=e1359]: 
+          - button "IRCTC Official App " [ref=e1360] [cursor=pointer]:
+            - generic [ref=e1361]:
+              - text: IRCTC Official App
+              - generic [ref=e1362]: 
+          - button "Advertise with us " [ref=e1363] [cursor=pointer]:
+            - generic [ref=e1364]:
+              - text: Advertise with us
+              - generic [ref=e1365]: 
+          - button "Refund Rules " [ref=e1366] [cursor=pointer]:
+            - generic [ref=e1367]:
+              - text: Refund Rules
+              - generic [ref=e1368]: 
+          - button "Person With Disability Facilities " [ref=e1369] [cursor=pointer]:
+            - generic [ref=e1370]:
+              - text: Person With Disability Facilities
+              - generic [ref=e1371]: 
+        - generic [ref=e1373]:
+          - button "E-Wallet " [ref=e1374] [cursor=pointer]:
+            - generic [ref=e1375]:
+              - text: E-Wallet
+              - generic [ref=e1376]: 
+          - button "IRCTC Co-branded Card Benefits " [ref=e1377] [cursor=pointer]:
+            - generic [ref=e1378]:
+              - text: IRCTC Co-branded Card Benefits
+              - generic [ref=e1379]: 
+          - button "IRCTC-iPAY Payment Gateway " [ref=e1380] [cursor=pointer]:
+            - generic [ref=e1381]:
+              - text: IRCTC-iPAY Payment Gateway
+              - generic [ref=e1382]: 
+          - button "IRCTC Zone " [ref=e1383] [cursor=pointer]:
+            - generic [ref=e1384]:
+              - text: IRCTC Zone
+              - generic [ref=e1385]: 
+          - button "DMRC Ticket Booking at IRCTC " [ref=e1386] [cursor=pointer]:
+            - generic [ref=e1387]:
+              - text: DMRC Ticket Booking at IRCTC
+              - generic [ref=e1388]: 
+        - generic [ref=e1390]:
+          - button "For Newly Migrated Agents " [ref=e1392] [cursor=pointer]:
+            - generic [ref=e1393]:
+              - text: For Newly Migrated Agents
+              - generic [ref=e1394]: 
+          - button "Mobile Zone " [ref=e1395] [cursor=pointer]:
+            - generic [ref=e1396]:
+              - text: Mobile Zone
+              - generic [ref=e1397]: 
+          - button "Policies " [ref=e1398] [cursor=pointer]:
+            - generic [ref=e1399]:
+              - text: Policies
+              - generic [ref=e1400]: 
+          - button "Ask Disha ChatBot " [ref=e1401] [cursor=pointer]:
+            - generic [ref=e1402]:
+              - text: Ask Disha ChatBot
+              - generic [ref=e1403]: 
+          - button "About us " [ref=e1404] [cursor=pointer]:
+            - generic [ref=e1405]:
+              - text: About us
+              - generic [ref=e1406]: 
+        - generic [ref=e1409]:
+          - button "Help & Support" [ref=e1410] [cursor=pointer]
+          - button "E-Pantry " [ref=e1411] [cursor=pointer]:
+            - generic [ref=e1412]:
+              - text: E-Pantry
+              - generic [ref=e1413]: 
+      - generic [ref=e1416]:
+        - img "Secured Payment Partner" [ref=e1419]
+        - generic [ref=e1421]:
+          - paragraph [ref=e1422]: Copyright Â© 2026 - www.irctc.co.in. All Rights Reserved
+          - paragraph [ref=e1423]:
+            - text: Designed and Hosted by
+            - strong [ref=e1424]:
+              - link "CRIS" [ref=e1425] [cursor=pointer]:
+                - /url: http://cris.org.in
+          - paragraph [ref=e1426]:
+            - strong [ref=e1427]:
+              - link "Compatible Browsers link opens a new windows" [ref=e1428] [cursor=pointer]:
+                - /url: http://contents.irctc.co.in/en/BetaSiteCompatibleBrowser.html
+                - text: Compatible Browsers
+          - paragraph [ref=e1429]: DM8MS4
+  - generic [ref=e1433] [cursor=pointer]: Easy Booking on AskDisha
+  - generic [ref=e1434]:
+    - generic [ref=e1435]:
+      - img "Default Opt-in Icon" [ref=e1437]
+      - generic [ref=e1438]:
+        - generic [ref=e1440]: Click on allow to subscribe to notifications
+        - generic [ref=e1442]: Stay updated with the latest happenings on our site
+    - generic [ref=e1443]:
+      - button "Later" [ref=e1444] [cursor=pointer]
+      - button "Allow" [ref=e1445] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | class Irctc {
+  2  |   constructor(page) {
+  3  |     this.page = page;
+  4  |     this.fromStationInput = page.locator('input[aria-label="Enter From station. Input is Mandatory."]');
+  5  |     this.stationOption = page.locator('li[role="option"]');
+  6  | 
+  7  |     this.toStationInput = page.locator('input[aria-label="Enter To station. Input is Mandatory."]');
+  8  |     this.stationOptionTo = page.locator('li[role="option"]');
+  9  | 
+  10 |     this.dateOption = page.locator("//input[@class='ng-tns-c69-9 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted']");
+  11 |     this.slctDate = page.locator('//a[text()="29"]');
+  12 | 
+  13 |     this.button = page.locator("//button[@class='search_btn train_Search']");
+  14 | 
+  15 |     this.sleeperslt = page.locator('//div[contains(@class,"pre-avl")][.//strong[text()="Sleeper (SL)"]]');
+  16 |   }
+  17 |   async goto() {
+  18 |     await this.page.goto('https://www.irctc.co.in/nget/train-search');
+  19 |   }
+  20 |   async selectFromStation() {
+  21 |     await this.fromStationInput.click();
+  22 |     await this.fromStationInput.fill("CLT");
+  23 | 
+  24 |     await this.stationOption.first().waitFor();
+  25 |     await this.stationOption.first().click();
+  26 |   }
+  27 | 
+  28 |   async selectToStation() {
+  29 |     await this.toStationInput.click();
+  30 |     await this.toStationInput.fill("ERS");
+  31 | 
+  32 |     await this.stationOptionTo.first().waitFor();
+  33 |     await this.stationOptionTo.first().click();
+  34 |   }
+  35 | 
+  36 |   async selectDate() {
+  37 |     await this.dateOption.click();
+  38 |     await this.dateOption.fill("29/06/2026");
+  39 | 
+  40 |     await this.slctDate.click();
+  41 |     await this.button.click();
+> 42 |     await this.sleeperslt.click();
+     |                           ^ Error: locator.click: Error: strict mode violation: locator('//div[contains(@class,"pre-avl")][.//strong[text()="Sleeper (SL)"]]') resolved to 9 elements:
+  43 | 
+  44 |     
+  45 |   }
+  46 | }
+  47 | module.exports = { Irctc }
+```
