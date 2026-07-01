@@ -27,12 +27,9 @@ test('company login',async ({page})=>{
     await page.waitForTimeout(2000);
     await login.saveButton();
     await page.waitForTimeout(2000);
+   
    ///await expect(page).toHaveURL('http://cameringroup.com/camerin_jobportal/register');
 
 });
-// add company
-// test('add company', async ({page})=>{
-//     const add=new Company(page);
-//     await add.addCompany();
-// });
+
 });

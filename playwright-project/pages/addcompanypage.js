@@ -15,7 +15,8 @@ class Company {
     this.prsnCntct=page.locator("//input[@name='person_contact_no']");
     this.eml=page.locator("//input[@name='email']");
     this.loc=page.locator("//input[@name='location']");
-    this.save=page.locator("//button[text()='Save']");
+    this.save=page.locator("//button[text()='Save Company']");
+   
     
   }
 
@@ -54,7 +55,7 @@ class Company {
     await this.prsnCntct.fill("8907600943");
   }
   async email(){
-    await this.eml.fill("demo2@gmail.com");
+    await this.eml.fill("demo13@gmail.com");
   }
   async location(){
     await this.loc.fill("kochi");
@@ -62,6 +63,7 @@ class Company {
   async saveButton(){
     await this.save.click();
   }
+ 
   
 }
 
